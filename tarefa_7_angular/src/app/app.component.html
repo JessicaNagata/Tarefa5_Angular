@@ -1,0 +1,79 @@
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+  <span>Tarefa 7 Angular</span>
+</div>
+
+<div class="content" role="main">
+  <div>
+    <h1>EXERCICIO 1 (Calcular media)</h1>
+    <h5>AC1</h5><input type="text" [(ngModel)]=ac1/>
+    <h5>AC2</h5><input type="text" [(ngModel)]=ac2/>
+    <h5>AG</h5><input type="text" [(ngModel)]=ag/> 
+    <h5>AF</h5><input type="text" [(ngModel)]=af/>
+    <br/>
+    <br/>
+    <button (click)="CalcularMedia()">Calcular</button>
+    <br/>
+    <br/>
+    <h5>Media final</h5><input type="text" [(ngModel)]=mediaFinal/>
+  </div>
+
+  <br/>
+  <br/>
+
+  <div>
+    <h1>EXERCICIO 2 (Calculadora)</h1>
+    <h5>Numero 1</h5><input type="text" [(ngModel)]=n1/>
+    <h5>Numero 2</h5><input type="text" [(ngModel)]=n2/>
+    <h5>OP Matematica</h5><input type="text" [(ngModel)]=opm/> 
+    <br/>
+    <br/>
+    <button (click)="CalcularOP()">Calcular</button>
+    <br/>
+    <br/>
+    <h5>Resultado</h5><input type="text" [(ngModel)]=resultado/>
+  </div>
+
+  <br/>
+  <br/>
+
+  <div>
+    <form [formGroup]="formularioAluno">
+      <h1>EXERCICIO 3 (Cadastro de Alunos)</h1>
+      <h5>RA</h5><input type="text" formControlName="ra" [(ngModel)]="formularioAluno.value.ra"/>
+      <h5>Nome</h5><input type="text" formControlName=nome [(ngModel)]=formularioAluno.value.nome/>
+      <h5>Email</h5><input type="text" formControlName=email [(ngModel)]=formularioAluno.value.email/>
+      <h5>Celular</h5><input type="text" formControlName=celular [(ngModel)]=formularioAluno.value.celular/> 
+      <br/>
+      <br/>
+      <button (click)="SalvarAluno()">Salvar</button>
+    </form>
+  </div>
+
+  <br/>
+  <br/>
+  <div>
+
+    <form [formGroup]="formularioCarro">
+      <h1>EXERCICIO 4 (Apolice de seguro)</h1>
+      <h5>Nome</h5><input type="text" formControlName="nome" [(ngModel)]="formularioCarro.value.nome"/>
+      <h5>Sexo (M ou F)</h5><input type="text" formControlName=sexo [(ngModel)]=formularioCarro.value.sexo/>
+      <h5>Idade</h5><input type="text" formControlName=idade [(ngModel)]=formularioCarro.value.idade/>
+      <h5>Valor do Automovel</h5><input type="text" formControlName=valor [(ngModel)]=formularioCarro.value.valor/> 
+      <br/>
+      <br/>
+      <button (click)="CalcularApolice()">Calcular apolice</button>
+      <br/>
+      <br/>
+    </form>
+    <h5>Valor da apolice</h5><input type="text" [(ngModel)]=valorApolice/> 
+    <br/>
+    <br/>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
